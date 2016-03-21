@@ -1,0 +1,28 @@
+{
+  "name": "saphyre-md-accordion",
+  "version": "0.0.1",
+  "homepage": "https://github.com/saphyre/md-accordion",
+  "authors": [
+    "Sérgio Marcelino <sergiofilhow@gmail.com>"
+  ],
+  "description": "Saphyre ngMaterial – mdAccordion component",
+  "license": "MIT",
+  "ignore": [
+    "gulpfile.js",
+    "karma.conf.js",
+    "src/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-material": "~1.0.1",
+    "angular-material-icons": "~0.6.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.8"
+  },
+  "resolutions": {
+    "angular": "~1.5.0"
+  }
+}
