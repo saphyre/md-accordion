@@ -1,5 +1,6 @@
 Accordion Material Design
 
+```
 md-accordion
     transclude
     multiple : '='
@@ -9,6 +10,7 @@ md-accordion
         title : '@'
         expanded : '='
         on-expand : '&'
+```
 
 ```
 <md-accordion multiple="multiple">
