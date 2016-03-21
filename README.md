@@ -1,5 +1,9 @@
-Accordion Material Design
+# Accordion Material Design
 
+## Install
+    bower install saphyre-md-accordion
+
+## Properties
 ```
 md-accordion
     transclude
@@ -7,11 +11,17 @@ md-accordion
     
     md-accordion-item
         transclude
-        title : '@'
         expanded : '='
         on-expand : '&'
+        
+        md-accordion-title
+            transclude
+            
+        md-accordion-content
+            transclude
 ```
 
+## Usage
 ```
 <md-accordion multiple="multiple">
     <md-accordion-item expanded="true" title="This is one option">
@@ -29,5 +39,8 @@ md-accordion
 </md-accordion>
 ```
 
-License MIT
-Author sergiofilhow@gmail.com
+## License
+MIT
+
+## Author 
+sergiofilhow@gmail.com

@@ -12,7 +12,11 @@ describe('AccordionItem', function () {
     beforeEach(inject(function (_$compile_, _$rootScope_) {
         $compile = _$compile_;
         $rootScope = _$rootScope_;
-        template = '<md-accordion-item title="Blind Guardian" on-expand="onExpandFn()">And then there was silence</md-accordion-item>';
+        template = '\
+            <md-accordion-item on-expand="onExpandFn()">\
+                <md-accordion-title>Blind Guardian</md-accordion-title>\
+                <md-accordion-content>And then there was silence</md-accordion-content>\
+            </md-accordion-item>';
         $scope = $rootScope.$new();
         $scope.onExpandFn = jasmine.createSpy();
 
@@ -21,8 +25,8 @@ describe('AccordionItem', function () {
     }));
 
     it('should have title', function () {
-        expect(element.find('h2').html()).toEqual('Blind Guardian');
-        expect(element.find('md-content').find('span').html()).toEqual('And then there was silence');
+        expect(element.find('h2').find('md-accordion-title').html()).toEqual('Blind Guardian');
+        expect(element.find('md-content').find('md-accordion-content').html()).toEqual('And then there was silence');
         expect(element.find('md-content').hasClass('ng-hide')).toBe(true);
 
         // collapse

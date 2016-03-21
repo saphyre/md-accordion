@@ -4,21 +4,23 @@
     angular.module('mdAccordion').component('mdAccordionItem', {
         controller : accordionItemController,
         bindings : {
-            title : '@',
             expanded : '=?',
             onExpand : '&'
         },
-        transclude : true,
+        transclude : {
+            title : 'mdAccordionTitle',
+            content : 'mdAccordionContent'
+        },
         require : {
             accordionCtrl : '^?mdAccordion'
         },
         template :
             '<div class="md-accordion" layout="column">\
                 <md-button class="md-primary accordion-toolbar" ng-click="$ctrl.toggle()" layout="row">\
-                    <h2 flex class="md-flex">{{ $ctrl.title }}</h2>\
+                    <h2 flex class="md-flex" ng-transclude="title"></h2>\
                     <ng-md-icon icon="{{ $ctrl.expanded ? \'expand_less\' : \'expand_more\' }}"></ng-md-icon>\
                 </md-button>\
-                <md-content flex layout-padding ng-transclude ng-show="$ctrl.expanded"></md-content>\
+                <md-content flex layout-padding ng-transclude="content" ng-show="$ctrl.expanded"></md-content>\
             </div>'
     });
 
