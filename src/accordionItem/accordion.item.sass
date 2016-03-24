@@ -1,0 +1,14 @@
+.md-accordion-content
+  max-height: 800px
+  transition: all ease .35s
+  overflow: hidden
+  position: relative
+  opacity: 1
+  &.ng-hide-remove
+    transition: all ease-out .5s
+  &.ng-hide-add
+    transition: all ease-in .5s
+  &.ng-hide
+    max-height: 0
+    transition: all ease .35s
+    opacity: 0

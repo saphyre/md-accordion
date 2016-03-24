@@ -20,7 +20,7 @@
                     <div flex ng-transclude="title" layout="row" layout-align="start start"></div>\
                     <ng-md-icon icon="{{ $ctrl.expanded ? \'expand_less\' : \'expand_more\' }}"></ng-md-icon>\
                 </md-button>\
-                <md-content flex layout-padding ng-transclude="content" ng-show="$ctrl.expanded"></md-content>\
+                <md-content flex ng-transclude="content" ng-show="$ctrl.expanded" class="md-accordion-content"></md-content>\
             </div>'
     });
 

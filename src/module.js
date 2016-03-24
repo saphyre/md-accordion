@@ -3,7 +3,8 @@
 
     angular.module('mdAccordion', [
         'ngMdIcons',
-        'ngMaterial'
+        'ngMaterial',
+        'ngAnimate'
     ]);
 
 }(angular));
